@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import '../constants.dart';
+
+class CardContent extends StatelessWidget {
+  CardContent({this.icon, this.label});
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Icon(
+          icon,
+          size: 80,
+        ),
+        SizedBox(
+          height: 7.0,
+        ),
+        Text(
+          label,
+          style: kLabelTextStyle,
+        ),
+      ],
+    );
+  }
+}
